@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2323ラーメン | 最後の一滴まで、魂を込めて。</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Zen+Old+Mincho:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ramenRed: '#e63946',
+                        ramenBlack: '#1a1a1a',
+                        ramenGold: '#d4af37',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans JP', 'sans-serif'],
+                        serif: ['Zen Old Mincho', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-stone-50 text-ramenBlack font-sans">
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-ramenBlack/80 backdrop-blur-sm text-white py-4 px-6 flex justify-between items-center transition-all duration-300" id="main-header">
+        <div class="text-2xl font-bold tracking-widest font-serif">2323 <span class="text-ramenRed">ラーメン</span></div>
+        <nav class="hidden md:flex space-x-8 text-sm font-bold">
+            <a href="#hero" class="hover:text-ramenRed transition-colors">トップ</a>
+            <a href="#about" class="hover:text-ramenRed transition-colors">こだわり</a>
+            <a href="#menu" class="hover:text-ramenRed transition-colors">メニュー</a>
+            <a href="#info" class="hover:text-ramenRed transition-colors">店舗情報</a>
+        </nav>
+        <div class="md:hidden">
+            <button id="mobile-menu-btn" class="text-2xl"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="assets/hero.png" alt="濃厚豚骨ラーメン" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+        <div class="relative text-center text-white z-10 px-4">
+            <h1 class="text-5xl md:text-8xl font-serif font-bold mb-6 drop-shadow-2xl animate-fade-in-up">
+                2323<span class="text-ramenRed">ラーメン</span>
+            </h1>
+            <p class="text-xl md:text-3xl font-serif tracking-widest mb-12 animate-fade-in-up delay-200">
+                最後の一滴まで、魂を込めて。
+            </p>
+            <a href="#menu" class="inline-block bg-ramenRed hover:bg-red-700 text-white font-bold py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-xl animate-fade-in-up delay-500">
+                お品書きを見る
+            </a>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white animate-bounce">
+            <i class="fas fa-chevron-down text-3xl"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-left mb-20 ml-4 md:ml-0">
+                <h2 class="text-5xl md:text-7xl font-serif font-bold inline-flex items-center gap-6 pb-4">
+                    <img src="assets/mascot.png" alt="マスコット" class="w-32 h-32 md:w-56 md:h-56 object-contain mascot-img">
+                    <span class="section-title relative">こだわり</span>
+                </h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-serif font-bold text-ramenRed">24時間炊き出した、<br>濃厚クリーミー豚骨スープ</h3>
+                    <p class="leading-relaxed text-gray-700">
+                        厳選された国産の豚骨のみを使用し、強火で24時間、魂を込めて炊き上げました。余分な脂を取り除きながらも、旨味だけを極限まで凝縮。
+                        クリーミーで口当たりが良く、最後の一滴まで飲み干したくなる、至極のスープです。
+                    </p>
+                    <p class="leading-relaxed text-gray-700">
+                        また、毎朝店舗で打つ自家製麺は、スープとの絡みを第一に考えた低加水の極細麺。小麦の香りが口いっぱいに広がります。
+                    </p>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -inset-2 bg-ramenRed rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                    <div class="relative bg-white rounded-lg overflow-hidden shadow-2xl">
+                        <img src="assets/noodles.png" alt="麺のこだわり" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-24 px-6 bg-ramenBlack text-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold inline-block border-b-4 border-ramenRed pb-2 section-title">
+                    お品書き
+                </h2>
+            </div>
+            <div class="grid gap-8">
+                <!-- Menu Item 1 -->
+                <div class="flex justify-between items-center border-b border-white/20 pb-4 group hover:border-ramenRed transition-colors">
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-serif font-bold group-hover:text-ramenRed transition-colors">特製豚骨ラーメン</h3>
+                        <p class="text-sm text-gray-400 mt-1">当店不動の人気No.1。全てが詰まった一杯。</p>
+                    </div>
+                    <div class="text-xl md:text-2xl font-bold font-serif">980<span class="text-sm ml-1">円</span></div>
+                </div>
+                <!-- Menu Item 2 -->
+                <div class="flex justify-between items-center border-b border-white/20 pb-4 group hover:border-ramenRed transition-colors">
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-serif font-bold group-hover:text-ramenRed transition-colors">黒マー油豚骨</h3>
+                        <p class="text-sm text-gray-400 mt-1">焦がしニンニクの香りが食欲をそそる濃厚な一品。</p>
+                    </div>
+                    <div class="text-xl md:text-2xl font-bold font-serif">1,050<span class="text-sm ml-1">円</span></div>
+                </div>
+                <!-- Menu Item 3 -->
+                <div class="flex justify-between items-center border-b border-white/20 pb-4 group hover:border-ramenRed transition-colors">
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-serif font-bold group-hover:text-ramenRed transition-colors">2323トッピング盛り</h3>
+                        <p class="text-sm text-gray-400 mt-1">チャーシュー、味玉、海苔、ねぎの豪華全部盛り。</p>
+                    </div>
+                    <div class="text-xl md:text-2xl font-bold font-serif">350<span class="text-sm ml-1">円</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section id="info" class="py-24 px-6 bg-stone-100">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold inline-block border-b-4 border-ramenRed pb-2 section-title">
+                    店舗情報
+                </h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-ramenRed text-2xl mt-1"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4 class="font-bold mb-1">所在地</h4>
+                            <p class="text-gray-700">〒123-4567<br>東京都ふさふさ区濃厚町 2-3-23</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="text-ramenRed text-2xl mt-1"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h4 class="font-bold mb-1">営業時間</h4>
+                            <p class="text-gray-700">平日：11:00 - 15:00 / 17:00 - 23:00</p>
+                            <p class="text-gray-700">土日祝：11:00 - 23:00（通し営業）</p>
+                            <p class="text-sm text-ramenRed mt-1">※スープがなくなり次第終了</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="text-ramenRed text-2xl mt-1"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4 class="font-bold mb-1">電話番号</h4>
+                            <p class="text-gray-700">03-2323-2323</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-300 rounded-lg overflow-hidden h-80 relative">
+                    <!-- Map Placeholder -->
+                    <div class="absolute inset-0 flex items-center justify-center text-gray-500 flex-col">
+                        <i class="fas fa-map-marked-alt text-6xl mb-4"></i>
+                        <span>Google Map (プレースホルダー)</span>
+                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.8280303808788!2d139.76493611525882!3d35.68123618019432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f7153%3A0x41377485191e43c6!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1620000000000!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ramenBlack text-white py-12 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="text-3xl font-serif font-bold mb-8 tracking-widest">2323ラーメン</div>
+            <div class="flex justify-center space-x-6 mb-8 text-2xl">
+                <a href="#" class="hover:text-ramenRed transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-ramenRed transition-colors"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-ramenRed transition-colors"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <div class="text-gray-500 text-sm">
+                &copy; 2026 2323ラーメン All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-ramenBlack', 'py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.remove('bg-ramenBlack', 'py-2');
+                header.classList.add('bg-ramenBlack/80', 'py-4');
+            }
+        });
+    </script>
+</body>
+</html>
