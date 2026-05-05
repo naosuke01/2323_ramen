@@ -24,15 +24,7 @@
     z-index: 1;
 }
 
-.mascot-img {
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
-    animation: sway 3s ease-in-out infinite;
-}
 
-@keyframes sway {
-    0%, 100% { transform: rotate(-5deg); }
-    50% { transform: rotate(5deg); }
-}
 
 
 .section-title::after {
